@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Funnel Analysis Predictor</title>
-    <style>
-        body { font-family: Arial; background-color: #f4f4f4; text-align: center; }
-        form { background: white; padding: 20px; margin: 50px auto; width: 300px; border-radius: 8px; }
-        input, select { width: 90%; padding: 8px; margin: 10px 0; }
-        button { background-color: #0078D7; color: white; padding: 10px 20px; border: none; border-radius: 5px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Churn Prediction Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #fff;
+      color: #0072ff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #0072ff;
+      color: #fff;
+    }
+    .info {
+      margin-top: 20px;
+      max-width: 600px;
+      font-size: 1.1em;
+    }
+  </style>
 </head>
 <body>
-    <h2>🔍 Funnel Conversion Predictor</h2>
-    <form action="/predict" method="post">
-        <label>Channel:</label>
-        <select name="channel">
-            <option>Organic</option>
-            <option>Email</option>
-            <option>Google Ads</option>
-            <option>Social Media</option>
-        </select>
-
-        <label>Region:</label>
-        <select name="region">
-            <option>North</option>
-            <option>South</option>
-            <option>East</option>
-            <option>West</option>
-        </select>
-
-        <label>Device:</label>
-        <select name="device">
-            <option>Desktop</option>
-            <option>Mobile</option>
-            <option>Tablet</option>
-        </select>
-
-        <label>Sessions:</label>
-        <input type="number" name="sessions" step="1" required>
-
-        <button type="submit">Predict</button>
-    </form>
-
-    {% if prediction_text %}
-        <h3>{{ prediction_text }}</h3>
-    {% endif %}
+  <h1>📊 Customer Churn Prediction Dashboard</h1>
+  <p class="info">
+    Welcome to the interactive churn prediction app powered by
+    <strong>Logistic Regression, Random Forest, and XGBoost</strong>.
+    Explore predictions, SHAP explanations, and business insights.
+  </p>
+  <a href="https://customer-churn-prediction-lr-rf.streamlit.app" class="btn">
+    🚀 Launch Dashboard
+  </a>
 </body>
 </html>
